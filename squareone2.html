@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+</head>
+<body bgcolor="light-green">
+&nbsp;&nbsp; &nbsp; &nbsp;<form style="display: inline" action="squareone4.html" method="get"><button class="button"><span>NON-VEG </span></button></form>
+<form style="display: inline" action="squareone7.html" method="get"><button class="button" style><span>VEG </span></button></form>
+<form style="display: inline" action="squareone3.html" method="get"><button class="button" style><span>SNACKS</span></button></form>
+<form style="display: inline" action="squareone5.html" method="get"><button class="button" style><span>DRINKS</span></button></form>
+<form style="display: inline" action="squareone6.html" method="get"><button class="button" style><span>DESERTS</span></button></form>
+
+<marquee><pre>*SQUARE-ONE is a food portal of CHITKARA UNIVERSITY  *We believe in providing students with good food  *EAT.MEET.GREET  *Providing you with the best service is our main motive *NEW FOOD ITEMS COMIG SOON</pre></marquee>
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade"><pre>
+  <center><img allign="left" src="food4.jpg" height="400" width="1000" ></center>
+</div>
+
+<div class="mySlides fade">
+  <center> <img allign="left" src="food2.jpg" height="400" width="1000" ></center>
+</div>
+<div class="mySlides fade">
+  <center>  <img allign="left" src="food.jpg" height="400" width="1000" > </center>
+</div></pre>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+ 
+
+</div>
+
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+</pre>
+</body>
+</html> 
